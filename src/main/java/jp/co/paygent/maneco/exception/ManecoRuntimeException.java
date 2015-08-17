@@ -2,6 +2,7 @@ package jp.co.paygent.maneco.exception;
 
 public class ManecoRuntimeException extends RuntimeException {
 
+	private static final long serialVersionUID = 6555138789365669995L;
 	private final String errorCode;
 
 	public ManecoRuntimeException(String errorCode) {

@@ -5,6 +5,7 @@ import jp.co.paygent.maneco.data.ErrorResponse;
 
 public class ManecoResponseException extends ManecoException {
 
+	private static final long serialVersionUID = 8330251177385558621L;
 	private int httpStatusCode;
 	private ErrorResponse errorData;
 
