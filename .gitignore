@@ -1,0 +1,5 @@
+/target/
+/coverage-report/
+/.settings/
+.classpath
+.project
