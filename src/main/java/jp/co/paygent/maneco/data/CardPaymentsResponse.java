@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 		value={"payment_id",
 				"object",
 				"livemode",
-				"create_time",
+				"created_time",
 				"status",
 				"amount",
 				"currency",
@@ -38,9 +38,9 @@ public class CardPaymentsResponse extends PaymentsResponse {
 	@JsonProperty("payment_id")
 	public final String paymentId;
 	public final boolean livemode;
-	@JsonProperty("create_time")
+	@JsonProperty("created_time")
 	@JsonFormat(shape = Shape.STRING, pattern = "yyyyMMddHHmmss", timezone = "Asia/Tokyo")
-	public final Date createTime;
+	public final Date createdTime;
 	public final String status;
 	public final BigDecimal amount;
 	public final String currency;
@@ -67,7 +67,7 @@ public class CardPaymentsResponse extends PaymentsResponse {
 			@JsonProperty("object") String object,
 			@JsonProperty("payment_id") String paymentId,
 			@JsonProperty("livemode") boolean livemode,
-			@JsonProperty("create_time") @JsonFormat(shape = Shape.STRING, pattern = "yyyyMMddHHmmss", timezone = "Asia/Tokyo") Date createTime,
+			@JsonProperty("created_time") @JsonFormat(shape = Shape.STRING, pattern = "yyyyMMddHHmmss", timezone = "Asia/Tokyo") Date createdTime,
 			@JsonProperty("status") String status,
 			@JsonProperty("amount") BigDecimal amount,
 			@JsonProperty("currency") String currency,
@@ -83,7 +83,7 @@ public class CardPaymentsResponse extends PaymentsResponse {
 		super(object);
 		this.paymentId = paymentId;
 		this.livemode = livemode;
-		this.createTime = createTime;
+		this.createdTime = createdTime;
 		this.status = status;
 		this.amount = amount;
 		this.currency = currency;
